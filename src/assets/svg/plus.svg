@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="8px" height="8px" viewBox="0 0 8 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>Plus Icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="UI-Kit" stroke="none" stroke-width="1" fill-rule="evenodd">
+        <g transform="translate(-1202.000000, -1963.000000)" id="White">
+            <g>
+                <g id="Misc" transform="translate(911.000000, 1837.000000)">
+                    <g id="Split-Field" transform="translate(217.000000, 119.000000)">
+                        <g id="Double-Button" transform="translate(60.000000, 0.000000)">
+                            <path d="M19,10 L22,10 L22,12 L19,12 L19,15 L17,15 L17,12 L14,12 L14,10 L17,10 L17,7 L19,7 L19,10 Z" id="Plus-Icon"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

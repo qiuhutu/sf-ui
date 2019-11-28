@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="8px" height="2px" viewBox="0 0 8 2" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>Minus Icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="UI-Kit" stroke="none" stroke-width="1" fill-rule="evenodd">
+        <g transform="translate(-1202.000000, -1987.000000)" id="White">
+            <g>
+                <g id="Misc" transform="translate(911.000000, 1837.000000)">
+                    <g id="Split-Field" transform="translate(217.000000, 119.000000)">
+                        <g id="Double-Button" transform="translate(60.000000, 0.000000)">
+                            <rect id="Minus-Icon" x="17" y="28" width="2" height="8"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
