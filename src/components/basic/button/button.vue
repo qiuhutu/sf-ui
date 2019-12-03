@@ -1,7 +1,7 @@
 <template>
   <button
     class="sf-button"
-    :class="{[`icon-${iconPosition} btn-size-${size} btn-type-${type}`]:true}"
+    :class="{[`icon-${iconPosition} btn-size-${size} btn-type-${type} btn-round-${round}`]:true}"
     @click="$emit('click')"
   >
     <sf-icon class="icon" v-if="icon && !loading" :name="icon"></sf-icon>
@@ -31,6 +31,10 @@ export default {
       validator(value) {
         return value === "light" || value === "dark";
       }
+    },
+    round: {
+      type: Boolean,
+      default: false
     },
     size: {
       type: String,
@@ -76,6 +80,7 @@ $color-b: #000;
   justify-content: center;
   align-items: center;
   vertical-align: middle;
+  font-size: 1em;
   &:focus {
     outline: none;
   }
@@ -85,6 +90,9 @@ $color-b: #000;
   > .icon {
     order: 1;
     margin-right: 1em;
+  }
+  &.btn-round-true {
+    border-radius: 25px;
   }
   &.btn-type-light {
     @include type-button($color-b, $color-w);
