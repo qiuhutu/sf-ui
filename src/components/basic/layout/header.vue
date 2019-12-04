@@ -1,16 +1,17 @@
 <template>
-  <div class="header">
+  <div class="sf-header" :style="{height: `${height}px`}">
     <slot></slot>
   </div>
 </template>
 
 <script>
 export default {
-  name: "sf-header"
+  name: "sf-header",
+  props: {
+    height: {
+      type: [Number, String],
+      default: 60
+    }
+  }
 };
 </script>
-
-<style lang="scss" scoped>
-.header {
-}
-</style>

@@ -65,7 +65,7 @@ export default {
     }
   },
   computed: {
-    gutter() {
+    gutter() { //查找父元素row。如果向上一层没有找到父元素row，则继续向上，直到找到为止
       let parent = this.$parent;
       while (parent && parent.$options.name !== "sf-row") {
         parent = parent.$parent;

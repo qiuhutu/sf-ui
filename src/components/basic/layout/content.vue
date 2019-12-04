@@ -1,15 +1,17 @@
 <template>
-  <div class="content">
+  <div class="sf-content">
     <slot></slot>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  name: "sf-content"
+};
 </script>
 
 <style lang="scss" scoped>
-.content {
+.sf-content {
   flex-grow: 1;
 }
 </style>

@@ -3,12 +3,12 @@
     <sf-button size="medium" type="light" round>PLAY NOW</sf-button>
     <sf-input placeholder="Your name"></sf-input>
     <sf-container style="color: white; margin-bottom:50px;">
-      <sf-header style="height: 50px; background:lightskyblue;">header</sf-header>
+      <sf-header style="background:lightskyblue;">header</sf-header>
       <sf-container>
-        <sf-sider style="height: 100px; background:#ddd; width:150px; color: black;">sider</sf-sider>
-        <sf-content style="height: 100px; background:deepskyblue;">content</sf-content>
+        <sf-aside style="height: 100px; background:#ddd; color: black;">aside</sf-aside>
+        <sf-content style="background:deepskyblue;">content</sf-content>
       </sf-container>
-      <sf-footer style="height: 50px; background:lightskyblue;">footer</sf-footer>
+      <sf-footer style="background:lightskyblue;">footer</sf-footer>
     </sf-container>
     <sf-row>
       <sf-col :span="4" :offset="4">Col1</sf-col>
@@ -25,7 +25,7 @@ import SfContent from "@/components/basic/layout/content";
 import SfHeader from "@/components/basic/layout/header";
 import SfContainer from "@/components/basic/layout/container";
 import SfFooter from "@/components/basic/layout/footer";
-import SfSider from "@/components/basic/layout/sider";
+import SfAside from "@/components/basic/layout/aside";
 import SfRow from "@/components/basic/grid/row";
 import SfCol from "@/components/basic/grid/col";
 
@@ -38,7 +38,7 @@ export default {
     "sf-header": SfHeader,
     "sf-container": SfContainer,
     "sf-footer": SfFooter,
-    "sf-sider": SfSider,
+    "sf-aside": SfAside,
     "sf-row": SfRow,
     "sf-col": SfCol
   }
