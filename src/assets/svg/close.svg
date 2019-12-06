@@ -1,18 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="7px" height="7px" viewBox="0 0 7 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
-    <title>Error Icon</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="UI-Kit" stroke="none" stroke-width="1"  fill-rule="evenodd">
-        <g transform="translate(-1083.000000, -1974.000000)" id="White">
-            <g>
-                <g id="Misc" transform="translate(911.000000, 1837.000000)">
-                    <g id="Tag" transform="translate(91.000000, 125.000000)">
-                        <path d="M83.7097693,15.49475 L81.19575,13.0915 C80.93475,12.8415 80.93475,12.4375 81.19575,12.1875 C81.45675,11.9375 81.87975,11.9375 82.14075,12.1875 L84.50475,14.4475 L86.86875,12.1875 C87.13075,11.9375 87.55375,11.9375 87.81475,12.1875 C88.07575,12.4375 88.07575,12.8415 87.81475,13.0915 L85.3007307,15.49475 L87.81475,17.898 C88.07575,18.148 88.07575,18.552 87.81475,18.802 C87.55375,19.052 87.13075,19.052 86.86975,18.802 L84.50575,16.542 L82.14175,18.802 C81.87975,19.052 81.45675,19.052 81.19575,18.802 C80.93475,18.552 80.93475,18.148 81.19575,17.898 L83.7097693,15.49475 Z" id="Error-Icon"></path>
-                    </g>
-                </g>
-            </g>
-        </g>
-    </g>
+<?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg t="1575621538751" class="icon" viewBox="0 0 1024 1024" version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" p-id="2796"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <style type="text/css"></style>
+    </defs>
+    <path d="M4.43392 97.36192l90.5088-90.5088 923.18976 923.18976-90.5088 90.5088-923.18976-923.18976ZM930.04288 4.43392l90.5088 90.5088-923.18976 923.18976-90.5088-90.5088 923.18976-923.18976Z" p-id="2797"></path>
 </svg>

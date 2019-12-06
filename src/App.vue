@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <sf-button size="medium" type="light" round>PLAY NOW</sf-button>
+    <sf-button size="medium" type="success" icon="close" small>Play Now</sf-button>
     <sf-input placeholder="Your name"></sf-input>
     <sf-container style="color: white; margin-bottom:50px;">
       <sf-header style="background:lightskyblue;">header</sf-header>
