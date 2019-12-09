@@ -81,19 +81,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "@/styles/color.scss";
+
 $height-small: 40px;
 $height-medium: 50px;
 $height-large: 60px;
 $width-small: 100px;
 $width-medium: 150px;
 $width-large: 220px;
-$color-light: #f8f4f4;
-$color-primary: #358ed7;
-$color-secondary: #2a648e;
-$color-dark: #34495e;
-$color-red: #f54b5e;
-$color-green: #48d2a0;
-$color-yellow: #f8c51c;
 
 @mixin color-button($bg-color, $font-color) {
   color: $font-color;

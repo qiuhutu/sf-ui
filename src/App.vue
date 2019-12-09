@@ -3,8 +3,9 @@
     <sf-container style="color: white; margin-bottom:50px;">
       <sf-header style="background:lightskyblue;">header</sf-header>
       <sf-container>
-        <sf-aside style="height: 100px; background:#ddd; color: black;" width="100">aside</sf-aside>
-        <sf-content>
+        <sf-aside style="background:#ddd; color: black;" width="100">aside</sf-aside>
+        <sf-content style="color: black;">
+          <sf-row aign="start"><sf-col :span="24">content</sf-col></sf-row>
           <sf-row align="space-between" >
             <sf-col :span="3">
               <sf-button size="medium" type="default">Default</sf-button>
@@ -53,6 +54,18 @@
     <sf-title isUpperCase level="4">Heading Level4</sf-title>
     <sf-title isUpperCase level="5">Heading Level5</sf-title>
     <sf-title isUpperCase level="6">Heading Level6</sf-title>
+    <br><hr>
+    <sf-text>SF Design</sf-text><br>
+    <sf-text type="secondary">SF Design</sf-text><br>
+    <sf-text type="success">SF Design</sf-text><br>
+    <sf-text type="warning">SF Design</sf-text><br>
+    <sf-text type="error">SF Design</sf-text><br>
+    <sf-text disabled>SF Design</sf-text><br>
+    <sf-text mark>SF Design</sf-text><br>
+    <sf-text code>SF Design</sf-text><br>
+    <sf-text underline>SF Design</sf-text><br>
+    <sf-text delete>SF Design</sf-text><br>
+    <sf-text strong>SF Design</sf-text><br>
   </div>
 </template>
 
@@ -68,6 +81,7 @@ import SfRow from "@/components/basic/grid/row";
 import SfCol from "@/components/basic/grid/col";
 import SfIcon from "@/components/basic/icon/icon";
 import SfTitle from "@/components/basic/typography/title";
+import SfText from "@/components/basic/typography/text";
 
 export default {
   name: "app",
@@ -81,7 +95,8 @@ export default {
     "sf-row": SfRow,
     "sf-col": SfCol,
     "sf-icon": SfIcon,
-    "sf-title": SfTitle
+    "sf-title": SfTitle,
+    "sf-text": SfText
   }
 };
 </script>
