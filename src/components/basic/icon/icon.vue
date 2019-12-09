@@ -15,6 +15,7 @@ export default {
 .sf-icon {
   width: 1em;
   height: 1em;
+  display: flex;
 }
 @keyframes spin {
   0% { transform: rotate(0deg); }

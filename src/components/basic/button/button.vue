@@ -2,14 +2,14 @@
   <button
     class="sf-button"
     @click="$emit('click')"
-    :class="[...buttonClass(), {'sf-button-blocked': blocked, 'sf-button-round': round, 'sf-button-circle': circle, 'sf-button-disabled': disabled}]"
+    :class="[...buttonClass(), `icon-${iconPosition}`, {'sf-button-blocked': blocked, 'sf-button-round': round, 'sf-button-circle': circle, 'sf-button-disabled': disabled}]"
     :disabled="disabled"
   >
     <sf-icon class="icon" v-if="icon && !loading" :name="icon"></sf-icon>
     <sf-icon class="icon loading" v-if="loading" name="loading"></sf-icon>
-    <div class="sf-button-content">
-      <slot />
-    </div>
+    <span class="sf-button-content">
+      <slot/>
+    </span>
   </button>
 </template>
 
@@ -34,8 +34,14 @@ export default {
       default: "default",
       validator(value) {
         return (
-          ["default", "primary", "error", "success", "warning"].indexOf(value) >
-          -1
+          [
+            "default",
+            "primary",
+            "error",
+            "success",
+            "warning",
+            "secondary"
+          ].indexOf(value) > -1
         );
       }
     },
@@ -83,6 +89,7 @@ $width-medium: 150px;
 $width-large: 220px;
 $color-light: #f8f4f4;
 $color-primary: #358ed7;
+$color-secondary: #2a648e;
 $color-dark: #34495e;
 $color-red: #f54b5e;
 $color-green: #48d2a0;
@@ -93,14 +100,15 @@ $color-yellow: #f8c51c;
   background-color: $bg-color;
   fill: $font-color;
   &.sf-button-disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
+    background-color: lighten($bg-color, 20%);
     pointer-events: none;
   }
 }
 @mixin size-button($btn-height, $btn-width) {
   height: $btn-height;
   width: $btn-width;
+  max-width: 100%;
+  max-height: 100%;
   &.sf-button-round {
     border-radius: $btn-height/2;
   }
@@ -127,23 +135,28 @@ $color-yellow: #f8c51c;
   border: none;
   font-size: 1em;
   &.sf-button-type-default {
-    @include color-button(#ffffff, $color-dark);
+    @include color-button($color-light, $color-dark);
     border: 1px solid #dddddd;
     &:hover {
-      background-color: lighten($color-primary, 45%);
-      fill: $color-primary;
-      color: $color-primary;
-      border-color: $color-primary;
+      background-color: lighten($color-light, 2%);
+      fill: $color-dark;
+      color: $color-dark;
+      border-color: #dddddd;
     }
     &:active {
-      color: darken($color-primary, 15%);
-      fill: darken($color-primary, 15%);
-      border-color: darken($color-primary, 15%);
+      background-color: #f8f5f5;
+      color: darken($color-dark, 15%);
+      fill: darken($color-dark, 15%);
+      border-color: darken(#dddddd, 15%);
     }
   }
   &.sf-button-type-primary {
     @include color-button($color-primary, $color-light);
     @include active-color-button($color-primary);
+  }
+  &.sf-button-type-secondary {
+    @include color-button($color-secondary, $color-light);
+    @include active-color-button($color-secondary);
   }
   &.sf-button-type-success {
     @include color-button($color-green, $color-light);
