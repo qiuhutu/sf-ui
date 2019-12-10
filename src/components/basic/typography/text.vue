@@ -62,7 +62,7 @@ export default {
 @import "@/styles/color.scss";
 .sf-text {
   &.sf-text-default {
-    color: $color-dark;
+    color: $color-typography;
   }
   &.sf-text-secondary {
     color: #8c8c8c;
