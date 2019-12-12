@@ -1,9 +1,9 @@
 <template>
-  <div
+  <p
     class="sf-paragraph"
     :class="[`sf-paragraph-${type}`,{'sf-paragraph-disabled':disabled, 'sf-paragraph-ellipsis': ellipsis===true}]"
   >
-    <span :style="styleList">
+    <span :style="styleList" ref="para">
       <mark v-if="mark">
         <slot />
       </mark>
@@ -21,8 +21,7 @@
       </strong>
       <slot v-else></slot>
     </span>
-    <a class="sf-paragraph-expand" v-if="expandable">+More</a>
-  </div>
+  </p>
 </template>
 
 <script>
@@ -30,8 +29,8 @@ export default {
   name: "sf-paragraph",
   data() {
     return {
-      styleList: {},
-      expandable: false
+      expandable: false,
+      styleList: {}
     };
   },
   props: {
@@ -60,25 +59,31 @@ export default {
   },
   methods: {
     handleEllipsisObject() {
-      let { ellipsis } = this;
-      let styleList = {};
-      console.log(ellipsis);
-      if (typeof ellipsis !== "object") return;
-      styleList["-webkit-box-orient"] = "vertical";
-      styleList["overflow"] = "hidden";
-      styleList["display"] = "-webkit-box";
-      if (ellipsis.rows !== null && ellipsis.rows >= 0) {
-        styleList["-webkit-line-clamp"] = ellipsis.rows.toString();
-      }
-      if (ellipsis.expandable !== null && ellipsis.expandable) {
-        this.expandable = true;
-      }
+      let { ellipsis} = this;
+      if (
+        typeof ellipsis !== "object" ||
+        typeof ellipsis.rows === "undefined" ||
+        ellipsis.rows === null ||
+        ellipsis.rows <= 0
+      )
+        return;
 
+      let styleList = {
+        "-webkit-box-orient": "vertical",
+        overflow: "hidden",
+        display: "-webkit-box"
+      };
+      styleList["-webkit-line-clamp"] = ellipsis.rows.toString();
+      return styleList;
+    },
+    initStyleList() {
+      let styleList = {};
+      Object.assign(styleList, this.handleEllipsisObject());
       this.styleList = styleList;
     }
   },
   mounted() {
-    this.handleEllipsisObject();
+    this.initStyleList();
   }
 };
 </script>
@@ -88,6 +93,7 @@ export default {
 
 .sf-paragraph {
   margin-bottom: 1em;
+  line-height: 1.6;
   &.sf-paragraph-default {
     color: $color-typography;
   }
@@ -111,17 +117,6 @@ export default {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
-  }
-  .sf-paragraph-expand {
-    color: $color-dark;
-    cursor: pointer;
-    &:hover {
-      text-decoration: underline;
-      color: #b0b0b0;
-    }
-    &:active {
-      color: $color-dark;
-    }
   }
 }
 </style>
