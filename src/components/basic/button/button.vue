@@ -123,7 +123,7 @@ $width-large: 220px;
 
 .sf-button {
   display: inline-flex;
-  border-radius: 1px;
+  border-radius: 5px;
   justify-content: center;
   align-items: center;
   vertical-align: middle;

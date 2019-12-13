@@ -49,10 +49,11 @@
               </sf-button>
             </sf-col>
             <sf-col :span="3">
-              <sf-button type="primary" loading>Round</sf-button>
-            </sf-col>
-            <sf-col :span="3">
-              <sf-button type="primary" loading iconPosition="right">Round</sf-button>
+              <sf-button-group>
+                <sf-button loading>Round</sf-button>
+                <sf-button>Default</sf-button>
+                <sf-button loading iconPosition="right">Round</sf-button>
+              </sf-button-group>
             </sf-col>
           </sf-row>
         </sf-content>
@@ -113,8 +114,8 @@
       ellipsis
     >近几年来，父亲和我都是东奔西走，家中光景是一日不如一日。他少年出外谋生，独力支持，做了许多大事。哪知老境却如此颓唐！他触目伤怀，自然情不能自已。情郁于中，自然要发之于外；家庭琐屑便往往触他之怒。他待我渐渐不同往日。但最近两年不见，他终于忘却我的不好，只是惦记着我，惦记着他的儿子。我北来后，他写了一信给我，信中说道：“我身体平安，惟膀子疼痛厉害，举箸提笔，诸多不便，大约大去之期不远矣。”我读到此处，在晶莹的泪光中，又看见那肥胖的、青布棉袍黑布马褂的背影。唉！我不知何时再能与他相见！</sf-paragraph>
     <sf-paragraph
-    :ellipsis="{rows: 2, expandable: true}"
-    >近几年来，父 亲和我  都 是东奔西走，家中光景是一日不如一日。他少年出外谋生，独力支持，做了许多大事。哪知老境却如此颓唐！他触目伤怀，自然情不能自已。情郁于中，自然要发之于外；家庭琐屑便往往触他之怒。他待我渐渐不同往日。但最近两年不见，他终于忘却我的不好，只是惦记着我，惦记着他的儿子。我北来后，他写了一信给我，信中说道：“我身体平安，惟膀子疼痛厉害，举箸提笔，诸多不便，大约大去之期不远矣。”我读到此处，在晶莹的泪光中，又看见那肥胖的、青布棉袍黑布马褂的背影。唉！我不知何时再能与他相见！</sf-paragraph>
+      :ellipsis="{rows: 2, expandable: true}"
+    >近几年来，父 亲和我 都 是东奔西走，家中光景是一日不如一日。他少年出外谋生，独力支持，做了许多大事。哪知老境却如此颓唐！他触目伤怀，自然情不能自已。情郁于中，自然要发之于外；家庭琐屑便往往触他之怒。他待我渐渐不同往日。但最近两年不见，他终于忘却我的不好，只是惦记着我，惦记着他的儿子。我北来后，他写了一信给我，信中说道：“我身体平安，惟膀子疼痛厉害，举箸提笔，诸多不便，大约大去之期不远矣。”我读到此处，在晶莹的泪光中，又看见那肥胖的、青布棉袍黑布马褂的背影。唉！我不知何时再能与他相见！</sf-paragraph>
     <sf-link href="#" disabled>Text Link</sf-link>
     <sf-link type="primary">Text Link</sf-link>
     <sf-link type="success">Text Link</sf-link>
@@ -127,6 +128,7 @@
 <script>
 import "./styles/app.scss";
 import SfButton from "./components/basic/button/button";
+import SfButtonGroup from "./components/basic/button/button-group";
 import SfContent from "@/components/basic/layout/content";
 import SfHeader from "@/components/basic/layout/header";
 import SfContainer from "@/components/basic/layout/container";
@@ -144,6 +146,7 @@ export default {
   name: "app",
   components: {
     "sf-button": SfButton,
+    "sf-button-group": SfButtonGroup,
     "sf-content": SfContent,
     "sf-header": SfHeader,
     "sf-container": SfContainer,
