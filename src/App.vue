@@ -115,6 +115,12 @@
     <sf-paragraph
     :ellipsis="{rows: 2, expandable: true}"
     >近几年来，父 亲和我  都 是东奔西走，家中光景是一日不如一日。他少年出外谋生，独力支持，做了许多大事。哪知老境却如此颓唐！他触目伤怀，自然情不能自已。情郁于中，自然要发之于外；家庭琐屑便往往触他之怒。他待我渐渐不同往日。但最近两年不见，他终于忘却我的不好，只是惦记着我，惦记着他的儿子。我北来后，他写了一信给我，信中说道：“我身体平安，惟膀子疼痛厉害，举箸提笔，诸多不便，大约大去之期不远矣。”我读到此处，在晶莹的泪光中，又看见那肥胖的、青布棉袍黑布马褂的背影。唉！我不知何时再能与他相见！</sf-paragraph>
+    <sf-link href="#" disabled>Text Link</sf-link>
+    <sf-link type="primary">Text Link</sf-link>
+    <sf-link type="success">Text Link</sf-link>
+    <sf-link type="warning">Text Link</sf-link>
+    <sf-link type="error">Text Link</sf-link>
+    <sf-link :underline="false">Text Link</sf-link>
   </div>
 </template>
 
@@ -132,6 +138,7 @@ import SfIcon from "@/components/basic/icon/icon";
 import SfTitle from "@/components/basic/typography/title";
 import SfText from "@/components/basic/typography/text";
 import SfParagraph from "@/components/basic/typography/paragraph";
+import SfLink from "@/components/basic/link/link";
 
 export default {
   name: "app",
@@ -147,7 +154,8 @@ export default {
     "sf-icon": SfIcon,
     "sf-title": SfTitle,
     "sf-text": SfText,
-    "sf-paragraph": SfParagraph
+    "sf-paragraph": SfParagraph,
+    "sf-link": SfLink
   }
 };
 </script>
